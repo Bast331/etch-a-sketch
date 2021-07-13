@@ -18,13 +18,9 @@ body {
     border: 2px solid black;
     display: flex;
     flex-wrap: wrap;
-    /* grid-template-columns: 
-    auto;
-    grid-template-rows: 
-    auto; */
     margin: 0 auto;
-    margin-top: 5rem;
-    margin-bottom: 7rem;
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
 }
 
 
@@ -36,41 +32,145 @@ body {
     background-color: white;
 }
 
+.button_container {
+    /* width: 41.28rem; */
+    display: flex;
+    width: 15rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
 .Clear {
     width: 5rem;
-    align-self: flex-end;
-    margin-right: 3rem;
+    align-self: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
     margin-top: 2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #bdbebd;
+    padding: 4px 0px;
+    transition: all 1s ease;
+}
+
+.Clear:hover {
+    background-color: white;
+}
+
+.Sketch {
+    width: 5rem;
+    align-self: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    padding: 4px 0px;
+    transition: all 1s ease;
+}
+
+.Sketch:hover {
+    background-color: black;
+    color: white;
+}
+
+.Eraser {
+    width: 5rem;
+    align-self: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    padding: 4px 0px;
+    transition: all 2s ease;
+    background-color: black;
+    color: white;
+}
+
+.Eraser:hover {
+    background-color: white;
+    color: black;
+}
+
+.Blue {
+    width: 5rem;
+    align-self: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    padding: 4px 0px;
+    transition: all 1s ease;
+}
+
+.Blue:hover {
+    background-color: cyan;
+}
+
+.Red{
+    width: 5rem;
+    align-self: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    padding: 4px 0px;
+    transition: all 1s ease;
+}
+
+.Red:hover {
+    background-color: red;
+    
+}
+
+.Random {
+    width: 5rem;
+    align-self: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    padding: 4px 0px;
+}
+
+
+.Random:hover {
+    background: url("Random_background.png");
 }
 
 .SliderWidth {
     width: 12.2rem;
-    align-self: flex-end;
-    margin-right: 3rem;
+    align-self: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
     margin-top: 2rem;
+    
 }
 
 .cellsValueDisplay {
     height: 1rem;
 }
 
-.Sketch {
-    width: 5rem;
-    align-self: flex-end;
-    margin-right: 3rem;
-    margin-top: 2rem;
-}
 
-.Eraser {
-    width: 5rem;
-    align-self: flex-end;
-    margin-right: 3rem;
-    margin-top: 2rem;
+@media(min-width: 600px) {
+    .button_container {
+        width: 21rem;
+    }
 }
-
-.Blue {
-    width: 5rem;
-    align-self: flex-end;
-    margin-right: 3rem;
-    margin-top: 2rem;
+ 
+@media(min-width: 1000px) {
+    .button_container {
+        width: 42rem;
+        margin-top: 3rem;
+    }
 }
