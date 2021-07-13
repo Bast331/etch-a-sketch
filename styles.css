@@ -1,10 +1,10 @@
 body {
     display: flex;
     height: 100vh;
+    flex-direction: column;
 }
 
 .Container {
-    
     border: 2px solid black;
     display: grid;
     grid-template-columns: 
@@ -12,7 +12,7 @@ body {
     grid-template-rows: 
     1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem ;
     margin: 0 auto;
-    align-self: center;
+    margin-top: 5rem;
 }
 
 
@@ -21,4 +21,19 @@ body {
     height: 1rem;
     width: 1rem;
     border: 1px solid black;
+}
+
+.DivAddBackground {
+    background-color: cyan;
+}
+
+.DivRemoveBackground {
+    background-color: white;
+}
+
+.Clear {
+    width: 5rem;
+    align-self: flex-end;
+    margin-right: 3rem;
+    margin-top: 2rem;
 }
