@@ -9,8 +9,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="body">
+    <div class="Title">Etch-a-sketch</div>
     <button class="Clear">Clear</button>
-
+    <button class="Eraser">Eraser</button>
+    <button class="Sketch">Black</button>
+    <button class="Blue">Blue</button>
+    <div class="SliderWidth">
+        <label class="cellsSizeContainer" id="cellsSizeContainer" for="cellsSizeSlider">
+            Number of Cells:
+            <p class="cellsValueDisplay"></p> 
+        </label>
+        <input type="range" min=16 max=50 value=16 id="cellsSizeSlider">
+    </div>
     <script src="main.js">
 
     </script>

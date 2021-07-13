@@ -1,18 +1,30 @@
 body {
     display: flex;
-    height: 100vh;
+    height: 100%;
     flex-direction: column;
 }
 
+
+.Title {
+    width: 12rem;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+
 .Container {
     border: 2px solid black;
-    display: grid;
-    grid-template-columns: 
-    1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem ;
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: 
+    auto;
     grid-template-rows: 
-    1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem ;
+    auto; */
     margin: 0 auto;
     margin-top: 5rem;
+    margin-bottom: 7rem;
 }
 
 
@@ -21,17 +33,42 @@ body {
     height: 1rem;
     width: 1rem;
     border: 1px solid black;
-}
-
-.DivAddBackground {
-    background-color: cyan;
-}
-
-.DivRemoveBackground {
     background-color: white;
 }
 
 .Clear {
+    width: 5rem;
+    align-self: flex-end;
+    margin-right: 3rem;
+    margin-top: 2rem;
+}
+
+.SliderWidth {
+    width: 12.2rem;
+    align-self: flex-end;
+    margin-right: 3rem;
+    margin-top: 2rem;
+}
+
+.cellsValueDisplay {
+    height: 1rem;
+}
+
+.Sketch {
+    width: 5rem;
+    align-self: flex-end;
+    margin-right: 3rem;
+    margin-top: 2rem;
+}
+
+.Eraser {
+    width: 5rem;
+    align-self: flex-end;
+    margin-right: 3rem;
+    margin-top: 2rem;
+}
+
+.Blue {
     width: 5rem;
     align-self: flex-end;
     margin-right: 3rem;
