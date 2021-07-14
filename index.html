@@ -7,20 +7,23 @@
     <title>Etch-a-sketch</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fuggles&display=swap');
+    </style> 
 </head>
 <body class="body">
     <div class="Title">Etch-a-sketch</div>
     <div class="button_container">
-        <button class="Clear">Clear</button>
-        <button class="Eraser">Eraser</button>
-        <button class="Sketch">Black</button>
-        <button class="Blue">Blue</button>
-        <button class="Red">Red</button>
-        <button class="Random">Random</button>
+        <button class="Clear button">Clear</button>
+        <button class="Eraser button">Eraser</button>
+        <button class="Sketch button">Black</button>
+        <button class="Blue button">Blue</button>
+        <button class="Shadow button">W to B</button>
+        <button class="Random button">Random</button>
     </div>
     <div class="SliderWidth">
         <label class="cellsSizeContainer" id="cellsSizeContainer" for="cellsSizeSlider">
-            Number of Cells:
+            <span class="cellsSizeTitle">Number of Cells:</span>
             <p class="cellsValueDisplay"></p> 
         </label>
         <input type="range" min=16 max=50 value=16 id="cellsSizeSlider">

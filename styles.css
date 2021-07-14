@@ -2,17 +2,24 @@ body {
     display: flex;
     height: 100%;
     flex-direction: column;
+    background: url("pexels-mudassir-ali-2680270.jpg");
+    font-family: 'Fuggles', 'Sans-Serif';
 }
 
 
 .Title {
     width: 12rem;
     margin: 0 auto;
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 3.5rem;
+    font-weight: 600;
     margin-top: 2rem;
+    
 }
 
+.button {
+font-size: 1.8rem;
+font-weight:600;
+}
 
 .Container {
     border: 2px solid black;
@@ -113,7 +120,7 @@ body {
     background-color: cyan;
 }
 
-.Red{
+.Shadow{
     width: 5rem;
     align-self: center;
     margin-right: 1rem;
@@ -123,11 +130,12 @@ body {
     border-radius: 5px;
     background-color: white;
     padding: 4px 0px;
-    transition: all 1s ease;
+    transition: all 2s linear;
 }
 
-.Red:hover {
-    background-color: red;
+.Shadow:hover {
+    background-color: black;
+    color: white;
     
 }
 
@@ -151,14 +159,23 @@ body {
 .SliderWidth {
     width: 12.2rem;
     align-self: center;
-    margin-right: 1rem;
-    margin-left: 1rem;
     margin-top: 2rem;
+    /* font-family: sans-serif; */
+}
+
+.cellsSizeTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    height: 2rem;
     
 }
 
 .cellsValueDisplay {
-    height: 1rem;
+    height: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    
 }
 
 

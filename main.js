@@ -7,6 +7,10 @@ let canvasWidth;
 let cellWidth;
 let backgroundColorForCells = "white";
 let divContainer;
+let r = 255;
+let g = 255; 
+let b = 255;
+let tenPercentDarker = 255*0.1;
 
 // Know if User is on Smartphone to make click instead of Hover Event
 var UserAgent = navigator.userAgent.toLowerCase();
@@ -166,7 +170,8 @@ function makeGrid() {
 
         const sketchRandom = document.querySelector('.Random');
         sketchRandom.addEventListener('click', () => {
-          
+    
+
             // User-Agent: if smartphone: click
             if (UserAgent.search(/(iphone|ipod|opera mini|fennec|palm|blackberry|android|symbian|series60|webos|ipad|windows phone)/) > -1) {
             // color: random rgb color
@@ -193,23 +198,47 @@ function makeGrid() {
             
         })
 
-        const sketchRed = document.querySelector('.Red');
-        sketchRed.addEventListener('click', () => {
-            // User-Agent: if smartphone: click
+        // Button shadow: if the beginning color after click isnt white set to white
+        const sketchShadow = document.querySelector('.Shadow');
+        sketchShadow.addEventListener('click', () => {
+            if (r != 255 && g != 255 && b != 255) {
+                r = 255;
+                g = 255;
+                b = 255;
+                console.log(`${r} / ${g} / ${b}`);
+            }
+        });
 
+        // color: shadow from white to black  in 10 percent steps
+        sketchShadow.addEventListener('click', () => {
+            // User-Agent: if smartphone: click
             if (UserAgent.search(/(iphone|ipod|opera mini|fennec|palm|blackberry|android|symbian|series60|webos|ipad|windows phone)/) > -1) {
-                // color: from white to black + 10%
-                    div.addEventListener('click', () => {
-                        div.style.backgroundColor = backgroundColorForCells = "red";
-                    });
+                div.addEventListener('click', () => {
+                    r = r - tenPercentDarker;
+                        g = g - tenPercentDarker;
+                        b = b - tenPercentDarker;
+                        console.log(`${r} / ${g} / ${b}`);
+                        div.style.backgroundColor = backgroundColorForCells = 'rgb(' + r + ',' + g + ',' + b + ')';
+                })
                 }
                 // else PC: hover
                 else {
                     div.addEventListener('mouseenter', () => {
-                        div.style.backgroundColor = backgroundColorForCells = "red";
-                    });
+                        r = r - tenPercentDarker;
+                        g = g - tenPercentDarker;
+                        b = b - tenPercentDarker;
+                        console.log(`${r} / ${g} / ${b}`);
+                        div.style.backgroundColor = backgroundColorForCells = 'rgb(' + r + ',' + g + ',' + b + ')';
+                    })
                 }
-        })
+            // add Eventlistener to make color tenpercent darker just once after click on button
+            // if added more than after first click the color will darken faster (sec click: twice as fast)
+            // cause event is added one more time so subtraction is made two times
+        }, {once: true});
+           
+                
+            
+        
         
 
         // Clear Button: make canvas completely white
